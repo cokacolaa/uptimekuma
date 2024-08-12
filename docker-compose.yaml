@@ -1,0 +1,18 @@
+version: '3'
+services:
+  uptime-kuma:
+    image: elestio/uptime-kuma:1.23.13
+    ports:
+      - "3001:3001"
+    environment:
+      - DB_TYPE=sqlite
+      - DB_STORAGE=/app/data/uptime-kuma.db
+      - SOFTWARE_VERSION_TAG=latest
+      - URL=http://ip_host
+    volumes:
+      - uptime-kuma-data:/app/data
+    restart: always
+    healthcheck:
+      disable: true
+volumes:
+  uptime-kuma-data:
