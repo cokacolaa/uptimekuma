@@ -6,7 +6,7 @@
 ### Install 
 
 ```
-git clone https://github.com/dylansys/uptimekuma.git && cd ./uptimekuma && sudo docker-compose up -d
+git clone https://github.com/dylansysops/uptimekuma.git && cd ./uptimekuma && sudo docker-compose up -d
 ```
 
 ### Login GUI
